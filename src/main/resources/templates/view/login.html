@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no,user-scalable=no">
+    <title>登录页</title>
+    <!--样式-->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/css/base.css}">
+    <script th:src="@{/js/jquery-3.5.1.js}"></script>
+    <script th:src="@{/js/popper.min.js}"></script>
+    <script th:src="@{/js/bootstrap.js}"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/my-login.css}">
+    <script th:src="@{/js/my-login.js}"></script>
+</head>
+<body class="my-login-page">
+<section class="h-100">
+    <div class="container h-100">
+        <div class="row justify-content-md-center h-100">
+            <div class="card-wrapper">
+                <div class="brand">
+                    <img src="../img/fac.png" alt="logo">
+                </div>
+                <div class="card fat">
+                    <div class="card-body">
+                        <h4 class="card-title text-center">登录</h4>
+                        <form method="POST" class="my-login-validation" novalidate="">
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">用户名</label>
+                                <input id="formGroupExampleInput" autocomplete="tel" type="text" class="form-control" name="username" required autofocus>
+                                <div class="invalid-feedback">
+                                    Username is invalid
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password">密码</label>
+                                <input id="password" autocomplete="tel" type="password" class="form-control" name="password" required data-eye>
+                                <div class="invalid-feedback">
+                                    Password is required
+                                </div>
+                            </div>
+                            <div class="form-group m-0">
+                                <button type="submit" class="btn btn-primary btn-block">
+                                    登录
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer">
+                    Copyright &copy; 2020 &sc; 一梦江湖
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+
+</html>

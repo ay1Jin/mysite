@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>一梦江湖</title>
+    <!--样式-->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/fonts/font-awesome-4.7.0/css/font-awesome.css}">
+    <link rel="stylesheet" th:href="@{/css/base.css}">
+    <script th:src="@{/js/jquery-3.5.1.js}"></script>
+    <script th:src="@{/js/popper.min.js}"></script>
+    <script th:src="@{/js/bootstrap.bundle.js}"></script>
+    <script th:src="@{/js/bootstrap.js}"></script>
+    <script>
+        // js初始化代码
+        $(function () {
+            $('[data-toggle="collapse"]').popover()
+        })
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="message-body">
+        <header style="padding-top: 8px" th:fragment="header1">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+                <a class="navbar-brand" th:href="@{/index}"><strong>一梦江湖</strong></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse"   id="navbarNav">
+                    <ul id="nav" class="navbar-nav" style="margin: 0 auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" th:href="@{/index}">留言 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/links}">友链</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/contact}">联系</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/about}">关于</a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="btn btn-secondary"><a th:href="@{/login}" style="color: black">登录</a></button>
+            </nav>
+            <hr>
+            <div class="row justify-content-around">
+                <div class="col-8">
+                    <img src="../img/fac.png" alt="头像" class="img-fluid " style="width: 200px;height: 200px;">
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title text-center" ><strong style="border-bottom: 1px solid #555555">一梦江湖</strong></h5>
+                        <div class="card-subtitle mb-2 text-muted text-center" style="margin-top: 10px;font-size: 14px;font-weight: 700">梦里不知身是客，一晌贪欢。</div>
+                        <p class="card-text" style="font-size: 14px;font-weight: 700;color: #6c757d !important">如今我们深夜饮酒，杯子碰到一起，都是梦破碎的声音。</p>
+                        <div class="card-subtitle mb-2 text-muted text-center" style="margin-top: 10px;font-size: 14px;font-weight: 700">人生自是有情痴，此恨不关风与月。</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <hr>
+        <main style="margin-top: 50px">
+            <ul class="list-unstyled">
+                <li>
+                    <a th:href="@{/message}"><h2>07.12 生</h2></a>
+                    <div class="message-introduce">
+                        <span><i class="fa fa-user-o" aria-hidden="true"> ayjin </i></span>
+                        <span><i class="fa fa-location-arrow" aria-hidden="true"> 192.168.1.1</i></span>
+                    </div>
+                    <div style="margin-top: 20px"><p style="font-size: 1.1em">不使用智能手机的人是怎么生活的？昨天去理发，肖店里没有二维码，那些经常不带现金的年轻人就只能下次在给了，我问为啥不放二维码，他说他不会用，也是。他理发20多年了，从小到达，从没见他用过电话。是个...</p></div>
+                    <div class="message-footer">
+                        <span><i class="fa fa-calendar" aria-hidden="true"> 2020-07-13 </i></span>
+                        <span class="zan"><i class="fa fa-thumbs-o-up" aria-hidden="true" > 2 </i></span>
+                        <span><i class="fa fa-commenting-o" aria-hidden="true"> 1 </i></span>
+                    </div>
+                </li>
+                <hr>
+                <li>
+                    <a th:href="@{/message}"><h2>07.12 生</h2></a>
+                    <div class="message-introduce">
+                        <span><i class="fa fa-user-o" aria-hidden="true"> ayjin </i></span>
+                        <span><i class="fa fa-location-arrow" aria-hidden="true"> 192.168.1.1</i></span>
+                    </div>
+                    <div style="margin-top: 20px"><p style="font-size: 1.1em">不使用智能手机的人是怎么生活的？昨天去理发，肖店里没有二维码，那些经常不带现金的年轻人就只能下次在给了，我问为啥不放二维码，他说他不会用，也是。他理发20多年了，从小到达，从没见他用过电话。是个...</p></div>
+                    <div class="message-footer">
+                        <span><i class="fa fa-calendar" aria-hidden="true"> 2020-07-13 </i></span>
+                        <span class="zan"><i class="fa fa-thumbs-o-up" aria-hidden="true" > 2 </i></span>
+                        <span><i class="fa fa-commenting-o" aria-hidden="true"> 1 </i></span>
+                    </div>
+                </li>
+                <hr>
+                <li>
+                    <a th:href="@{/message}"><h2>07.12 生</h2></a>
+                    <div class="message-introduce">
+                        <span><i class="fa fa-user-o" aria-hidden="true"> ayjin </i></span>
+                        <span><i class="fa fa-location-arrow" aria-hidden="true"> 192.168.1.1</i></span>
+                    </div>
+                    <div style="margin-top: 20px"><p style="font-size: 1.1em">不使用智能手机的人是怎么生活的？昨天去理发，肖店里没有二维码，那些经常不带现金的年轻人就只能下次在给了，我问为啥不放二维码，他说他不会用，也是。他理发20多年了，从小到达，从没见他用过电话。是个...</p></div>
+                    <div class="message-footer">
+                        <span><i class="fa fa-calendar" aria-hidden="true"> 2020-07-13 </i></span>
+                        <span class="zan"><i class="fa fa-thumbs-o-up" aria-hidden="true" > 2 </i></span>
+                        <span><i class="fa fa-commenting-o" aria-hidden="true"> 1 </i></span>
+                    </div>
+                </li>
+                <hr>
+                <li>
+                    <a th:href="@{/message}"><h2>07.12 生</h2></a>
+                    <div class="message-introduce">
+                        <span><i class="fa fa-user-o" aria-hidden="true"> ayjin </i></span>
+                        <span><i class="fa fa-location-arrow" aria-hidden="true"> 192.168.1.1</i></span>
+                    </div>
+                    <div style="margin-top: 20px"><p style="font-size: 1.1em">不使用智能手机的人是怎么生活的？昨天去理发，肖店里没有二维码，那些经常不带现金的年轻人就只能下次在给了，我问为啥不放二维码，他说他不会用，也是。他理发20多年了，从小到达，从没见他用过电话。是个...</p></div>
+                    <div class="message-footer">
+                        <span><i class="fa fa-calendar" aria-hidden="true"> 2020-07-13 </i></span>
+                        <span class="zan"><i class="fa fa-thumbs-o-up" aria-hidden="true" > 2 </i></span>
+                        <span><i class="fa fa-commenting-o" aria-hidden="true"> 1 </i></span>
+                    </div>
+                </li>
+                <hr>
+            </ul>
+
+            <!--            发表留言-->
+            <button style="background-color:transparent; border: 1px solid #999;font-size: 14px" type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter">
+                留言
+            </button>
+            <!--分页-->
+            <a href="#" style="float: right;margin: auto 0px;color: #999;font-size: 14px">下一页 <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+
+<!--            弹框-->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">留言</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <section>
+                                <div class="row">
+                                    <div class="col-lg-10 offset-lg-1">
+                                        <div class="contact-box text-center">
+                                            <form id="ajax-contact" action="contact.php" method="post">
+                                                <div class="form-group row">
+                                                    <div class="col-lg-6"><input type="text" class="form-control" id="name" name="name"
+                                                                                 placeholder="昵称" required=""></div>
+                                                    <div class="col-lg-6"><input type="email" class="form-control" id="email" name="email"
+                                                                                 placeholder="邮箱" required=""></div>
+                                                </div>
+                                                <div class="form-group"><input type="text" class="form-control" id="subject" name="subject"
+                                                                               placeholder="标题"></div>
+                                                <div class="form-group"><textarea class="form-control" id="message" name="message" rows="10"
+                                                                                  placeholder="留言内容*" required=""></textarea></div>
+                                                <button type="submit" class="btn btn-primary">提交</button>
+                                                <div id="form-messages"></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--留言-->
+
+        </main>
+        <hr>
+    </div>
+    <footer>
+        <div class="text-center" style="font-size: 12.8px;color: #BBBBBB">
+            <span>© 2020-2021 Design by ayjin - <a href="#">1 Posts crafted</a></span>
+            <span> ♥
+                <a href="#">zx</a> &
+                <a href="#">self</a> By
+                <a href="#">self</a>
+            </span>
+            <div class="powered_by">
+                <a href="#">文章 RSS</a> |
+                <a href="#">评论 RSS</a> |
+                <a href="#" title="一梦江湖">文章归档</a> |
+                <a href="#" title="Sitemap">Sitemap</a> |
+                <a href="https://tongji.baidu.com" title="百度统计">百度统计</a> |
+                <a href="http://beian.miit.gov.cn" target="_blank">赣ICP备20002372号</a>
+            </div>
+        </div>
+    </footer>
+</div>
+<script>
+// <!--    点赞-->
+    $(".zan").click(function () {
+        addFavour(this);
+
+    });
+    // 评论
+    function addFavour(self){
+        console.log(self.getElementsByTagName("i")[0]);
+        console.log(self.getElementsByTagName("i")[0].innerText);
+        self.getElementsByTagName("i")[0].innerText++;
+    }
+</script>
+</body>
+</html>

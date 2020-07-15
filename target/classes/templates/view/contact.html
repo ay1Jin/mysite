@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>一梦江湖-联系</title>
+    <!--样式-->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/fonts/font-awesome-4.7.0/css/font-awesome.css}">
+    <link rel="stylesheet" th:href="@{/css/base.css}">
+    <script th:src="@{/js/jquery-3.5.1.js}"></script>
+    <script th:src="@{/js/jquery-3.5.1.js}"></script>
+    <script th:src="@{/js/bootstrap.bundle.js}"></script>
+    <script th:src="@{/js/bootstrap.js}"></script>
+    <script>
+        // js初始化代码
+        $(function () {
+            $('[data-toggle="collapse"]').popover()
+        })
+    </script>
+    <style>
+        .contact {
+            margin: auto 0px;
+            background-color:#f8f3f3;
+            border-radius: 5px;
+        }
+        .contact > p > small{
+            border-bottom: 2px solid #555;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="message-body">
+        <header th:replace="/view/about::header2"></header>
+        <hr>
+        <main>
+            <div class="row">
+                <div class="col-sm-4">
+                    <img src="../img/wechat.png" class="img-fluid" alt="微信">
+                </div>
+                <div class="col-sm-6 contact">
+                    <p class="text-center"><strong style="border-bottom: 2px solid #555555">一梦江湖</strong></p>
+                    <p><small style="margin: auto 0px;"><strong >企鹅：</strong> 502466787</small></p>
+                    <p><small><strong style="margin: auto 0px;">邮箱：</strong> ayjinwk@163.com</small></p>
+                    <p><small><strong style="margin: auto 0px;">GitHub：</strong><a href="https://github.com/ay1Jin">https://github.com/ay1Jin</a></small></p>
+                    <p><small><strong style="margin: auto 0px;">江湖渺渺，再见已枉然。</strong></small></p>
+                </div>
+            </div>
+        </main>
+        <hr>
+    </div>
+    <footer>
+        <div class="text-center" style="font-size: 12.8px;color: #BBBBBB">
+            <span>© 2020-2021 Design by ayjin - <a href="#">1 Posts crafted</a></span>
+            <span> ♥
+                <a href="#">zx</a> &
+                <a href="#">self</a> By
+                <a href="#">self</a>
+            </span>
+            <div class="powered_by">
+                <a href="#">文章 RSS</a> |
+                <a href="#">评论 RSS</a> |
+                <a href="#" title="一梦江湖">文章归档</a> |
+                <a href="#" title="Sitemap">Sitemap</a> |
+                <a href="https://tongji.baidu.com" title="百度统计">百度统计</a> |
+                <a href="http://beian.miit.gov.cn" target="_blank">赣ICP备20002372号</a>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

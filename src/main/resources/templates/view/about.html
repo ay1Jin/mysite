@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>一梦江湖-联系</title>
+    <!--样式-->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/fonts/font-awesome-4.7.0/css/font-awesome.css}">
+    <link rel="stylesheet" th:href="@{/css/base.css}">
+    <script th:src="@{/js/jquery-3.5.1.js}"></script>
+    <script th:src="@{/js/jquery-3.5.1.js}"></script>
+    <script th:src="@{/js/bootstrap.bundle.js}"></script>
+    <script th:src="@{/js/bootstrap.js}"></script>
+    <script>
+        // js初始化代码
+        $(function () {
+            $('[data-toggle="collapse"]').popover()
+        })
+    </script>
+    <style>
+        .about p{
+            font-size: 16.8px;
+        }
+        .about ul li {
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="message-body">
+        <header style="padding-top: 8px" th:fragment="header2">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+                <a class="navbar-brand" href="index.html"><strong>一梦江湖</strong></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse"   id="navbarNav">
+                    <ul id="nav" class="navbar-nav" style="margin: 0 auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" th:href="@{/index}">留言 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/links}">友链</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/contact}">联系</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/about}">关于</a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="btn btn-secondary"><a th:href="@{/login}" style="color: black">登录</a></button>
+            </nav>
+            <hr>
+        </header>
+        <hr>
+        <main>
+            <div class="about">
+                <p><strong># 本站信息</strong></p>
+                <ul>
+                    <li>名称：一梦江湖</li>
+                    <li>简介：花了比较大的精力做这个网站，前前后后熬下来快一个多月，但过程还是很开心的啦，学到了不少。</li>
+                </ul>
+                <p><strong># 一些链接</strong></p>
+                <ul>
+                    <li>GitHub：<a href="https://github.com/ay1Jin">ayjin</a></li>
+                    <li>网易云音乐：<a href="https://music.163.com/#/user/home?id=323308437">江湖一梦</a></li>
+                    <li>E-mail: ayjinwk@163.com</li>
+                </ul>
+                <p><strong># 关于以后</strong></p>
+                <ul>
+                    <li>无论以后怎么样，这个网站会一直运营下去，大家都要好好的！</li>
+                    <hr>
+                    <li>最终修改于：2020-07-15 3:05:54</li>
+                </ul>
+            </div>
+        </main>
+        <hr>
+    </div>
+    <footer>
+        <div class="text-center" style="font-size: 12.8px;color: #BBBBBB">
+            <span>© 2020-2021 Design by ayjin - <a href="#">1 Posts crafted</a></span>
+            <span> ♥
+                <a href="#">zx</a> &
+                <a href="#">self</a> By
+                <a href="#">self</a>
+            </span>
+            <div class="powered_by">
+                <a href="#">文章 RSS</a> |
+                <a href="#">评论 RSS</a> |
+                <a href="#" title="一梦江湖">文章归档</a> |
+                <a href="#" title="Sitemap">Sitemap</a> |
+                <a href="https://tongji.baidu.com" title="百度统计">百度统计</a> |
+                <a href="http://beian.miit.gov.cn" target="_blank">赣ICP备20002372号</a>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

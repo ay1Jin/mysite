@@ -1,0 +1,9 @@
+com\ayjin\controller\view\linksController.class
+com\ayjin\controller\view\indexController.class
+com\ayjin\controller\view\loginController.class
+com\ayjin\controller\view\aboutController.class
+com\ayjin\controller\view\messageController.class
+com\ayjin\controller\view\contactController.class
+com\ayjin\MysiteApplication.class
+com\ayjin\controller\view\showController.class
+com\ayjin\controller\admin\adminController.class

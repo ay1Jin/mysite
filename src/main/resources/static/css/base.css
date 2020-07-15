@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'webfont';
+    font-display: swap;
+    src: url('../fonts/sj.svg'); /* IE9*/
+    src: url('../fonts/sj.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/sj.woff2') format('woff2'),
+    url('../fonts/sj.woff') format('woff'), /* chrome、firefox */
+    url('../fonts/sj.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../fonts/sj.svg#after') format('svg'); /* iOS 4.1- */
+}
+body {
+    background-color: #fbf7e8;
+    font-family: webfont;
+    font-weight: 600;
+}
+.message-body {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #f7f7f7;
+    padding: 25px;
+    box-shadow: 5px 5px 10px gray;
+    border-radius: 15px;
+}
+#nav > li {
+    margin-right: 5px;
+    border-bottom: 2px solid #555;
+}
+
+.contact-box {
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 50px 50px 35px;
+    background-color: #fff;
+    border-radius: 6px;
+}
+
+.contact-box input {
+    height: 50px;
+    border: 1px solid #f7f6f5;
+    font-size: 15px;
+    background-color: #f7f6f5;
+    font-weight: 500
+}
+
+.contact-box textarea {
+    border: 1px solid #f7f6f5;
+    padding-top: 10px;
+    background-color: #f7f6f5;
+    font-size: 15px;
+    font-weight: 500
+}
+
+.contact-box button {
+    background-color: #325eff;
+    border: 0;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: 0;
+    font-weight: 500;
+    font-size: 15px
+}
+
+.contact-box button:hover {
+    background-color: #0f39cf;
+}
+
+.list-unstyled > li {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.message-introduce > span{
+    margin-right: 10px;
+    font-size: 12px;
+}
+.message-footer {
+    margin-top: 30px;
+    font-size: 12px;
+}
+.message-footer > span {
+    margin-right: 10px;
+}
+footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: .8em;
+    line-height: 3em;
+    color: #bbb;
+}
+a {
+    color: #999999;
+}
+.powered_by {
+    line-height: 1.2em;
+}

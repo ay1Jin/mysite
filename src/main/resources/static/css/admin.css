@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'webfont';
+    font-display: swap;
+    src: url('../fonts/sj.svg'); /* IE9*/
+    src: url('../fonts/sj.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../fonts/sj.woff2') format('woff2'),
+    url('../fonts/sj.woff') format('woff'), /* chrome、firefox */
+    url('../fonts/sj.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../fonts/sj.svg#after') format('svg'); /* iOS 4.1- */
+}
+body {
+    background-color: #fbf7e8;
+    font-family: webfont;
+    font-weight: 600;
+}
+.container-fluid {
+    padding: 0px;
+}
+table{
+    table-layout:fixed;
+}
+.colStyle {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

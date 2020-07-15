@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-cn" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>一梦江湖-留言</title>
+    <!--样式-->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" th:href="@{/fonts/font-awesome-4.7.0/css/font-awesome.css}">
+    <link rel="stylesheet" th:href="@{/css/base.css}">
+    <script th:src="@{/js/jquery-3.5.1.js}"></script>
+    <script th:src="@{/js/jquery-3.5.1.js}"></script>
+    <script th:src="@{/js/bootstrap.bundle.js}"></script>
+    <script th:src="@{/js/bootstrap.js}"></script>
+    <script>
+        // js初始化代码
+        $(function () {
+            $('[data-toggle="popover"]').popover()
+        })
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="message-body">
+        <header th:replace="/view/about::header2"></header>
+        <hr>
+        <a href="#"><h2>07.12 生</h2></a>
+        <div class="message-introduce">
+            <span><i class="fa fa-user-o" aria-hidden="true"> ayjin </i></span>
+            <span><i class="fa fa-location-arrow" aria-hidden="true"> 192.168.1.1</i></span>
+        </div>
+        <div style="margin-top: 20px"><p style="font-size: 1.1em">
+            久违的看了一集剧场版的动漫，
+            画风很清新，
+            剧情铺垫有些长，
+            而且最后结局比较潦草。
+
+            记录下评价：
+
+            无限
+            敢爱敢恨，性格直爽，也很任性，
+            但这种性格的她也会有所顾忌。
+            所以之后为了解日之出失去的人类的“脸”，
+            从而引发了一系列的故事......
+
+            日之出
+            优秀老实且不坦率，
+            后来得知无限变成猫的事情有所改变。
+            也正视了无限的感情。
+
+            我感觉本篇真正的MVP是“黄豆粉”，
+            得到无限失去的人类的“脸”，
+            从而变成“人类”的猫。
+            黄豆粉不惜自己猫生短暂的寿命，
+            去找“卖面具的”猫，
+            以换取人类的身份。
+            只为自己主人熏的安心。
+            虽然熏与猫“无限”的感情好了，
+            但失去的黄豆粉的熏也是心不在焉，
+            说出了“希望黄豆粉离开我能找个好主人”的话，
+            触动到了黄豆粉，
+            导致黄豆粉去找了日之出，
+            说出了事情的真相。
+
+            随后带日之出去猫岛救回了无限。
+            一切归于平静。
+
+            易求无价宝，难得有情猫。
+        </p></div>
+        <div class="message-footer">
+            <span><i class="fa fa-calendar" aria-hidden="true"> 2020-07-13 </i></span>
+            <span id="zan"><i class="fa fa-thumbs-o-up" aria-hidden="true" > 2 </i></span>
+            <span><i class="fa fa-commenting-o" aria-hidden="true"> 1 </i></span>
+        </div>
+        <hr>
+        <div class="message-comment">
+            <form>
+                <div class="form-group">
+                    <textarea class="form-control" name="comment" rows="3" placeholder="评论"></textarea>
+                </div>
+                <div class="row">
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                            <input type="text" name="username" class="form-control"  placeholder="用户名">
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-control"  placeholder="邮箱">
+                        </div>
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="form-group float-right text-center">
+                            <input type="button" value="提交评论" >
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <hr>
+        <div class="show-comment">
+            <ul class="list-group list-group-flush" id="comment-list">
+                <li class="list-group-item">
+                    <div class="author">
+                        <div class="avatar float-left">
+                            <img src="../img/fac.png" alt="fac" class="img-fluid shadow" style="width: 50px;height: 50px;">
+                        </div>
+                        <div class="author-name float-left">
+                            <small><a href="index.html">一梦江湖 </a></small>
+                            <small><a href="" style="background:#dddddd;">回复</a></small>
+                        </div>
+                        <div class="time float-left" >
+                            <small style="margin-left: 8px;">2020-07-14</small>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="comment-content">
+                        <p><small><strong>你好！欢迎来访~</strong></small></p>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="author">
+                        <div class="avatar float-left">
+                            <img src="../img/fac.png" alt="fac" class="img-fluid shadow" style="width: 50px;height: 50px;">
+                        </div>
+                        <div class="author-name float-left">
+                            <small><a href="index.html">一梦江湖 </a></small>
+                            <small><a href="" style="background:#dddddd;">回复</a></small>
+                        </div>
+                        <div class="time float-left" >
+                            <small style="margin-left: 8px;">2020-07-14</small>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="comment-content">
+                        <p><small><strong>你好！欢迎来访~</strong></small></p>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="author">
+                        <div class="avatar float-left">
+                            <img src="../img/fac.png" alt="fac" class="img-fluid shadow" style="width: 50px;height: 50px;">
+                        </div>
+                        <div class="author-name float-left">
+                            <small><a href="index.html">一梦江湖 </a></small>
+                            <small><a href="" style="background:#dddddd;">回复</a></small>
+                        </div>
+                        <div class="time float-left" >
+                            <small style="margin-left: 8px;">2020-07-14</small>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="comment-content">
+                        <p><small><strong>你好！欢迎来访~</strong></small></p>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="author">
+                        <div class="avatar float-left">
+                            <img src="../img/fac.png" alt="fac" class="img-fluid shadow" style="width: 50px;height: 50px;">
+                        </div>
+                        <div class="author-name float-left">
+                            <small><a href="index.html">一梦江湖 </a></small>
+                            <small><a href="" style="background:#dddddd;">回复</a></small>
+                        </div>
+                        <div class="time float-left" >
+                            <small style="margin-left: 8px;">2020-07-14</small>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="comment-content">
+                        <p><small><strong>你好！欢迎来访~</strong></small></p>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="author">
+                        <div class="avatar float-left">
+                            <img src="../img/fac.png" alt="fac" class="img-fluid shadow" style="width: 50px;height: 50px;">
+                        </div>
+                        <div class="author-name float-left">
+                            <small><a href="index.html">一梦江湖 </a></small>
+                            <small><a href="" style="background:#dddddd;">回复</a></small>
+                        </div>
+                        <div class="time float-left" >
+                            <small style="margin-left: 8px;">2020-07-14</small>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="comment-content">
+                        <p><small><strong>你好！欢迎来访~</strong></small></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <hr>
+    </div>
+
+    <footer>
+        <div class="text-center" style="font-size: 12.8px;color: #BBBBBB">
+            <span>© 2020-2021 Design by ayjin - <a href="#">1 Posts crafted</a></span>
+            <span> ♥
+                <a href="#">zx</a> &
+                <a href="#">self</a> By
+                <a href="#">self</a>
+            </span>
+            <div class="powered_by">
+                <a href="#">文章 RSS</a> |
+                <a href="#">评论 RSS</a> |
+                <a href="#" title="一梦江湖">文章归档</a> |
+                <a href="#" title="Sitemap">Sitemap</a> |
+                <a href="https://tongji.baidu.com" title="百度统计">百度统计</a> |
+                <a href="http://beian.miit.gov.cn" target="_blank">赣ICP备20002372号</a>
+            </div>
+        </div>
+    </footer>
+</div>
+<script>
+    // <!--    点赞-->
+    $("#zan").click(function () {
+        addFavour(this);
+
+    });
+    // 评论
+    function addFavour(self){
+        console.log(self.getElementsByTagName("i")[0]);
+        console.log(self.getElementsByTagName("i")[0].innerText);
+        self.getElementsByTagName("i")[0].innerText++;
+    }
+</script>
+</body>
+</html>
