@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ayjin.mapper.ViewerMapper">
+    <!--所有访客查询-->
+    <select id="queryAllViewers" resultType="viewer">
+        select ip,time from viewers order by time desc
+    </select>
+    <!--增加访客-->
+    <insert id="addViewers" parameterType="String">
+        insert into viewers (ip) values (#{ip})
+    </insert>
+</mapper>

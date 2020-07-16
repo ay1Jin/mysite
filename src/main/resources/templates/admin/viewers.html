@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>访客管理</title>
+    <title>访客信息</title>
     <!--样式-->
     <link rel="stylesheet" th:href="@{/css/bootstrap.css}">
     <link rel="stylesheet" th:href="@{/css/admin.css}">
@@ -36,28 +36,26 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>192.168.1.1</td>
-                        <td>2020-07-15</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>192.168.1.1</td>
-                        <td>2020-07-15</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>192.168.1.1</td>
-                        <td>2020-07-15</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>192.168.1.1</td>
-                        <td>2020-07-15</td>
+                    <tr th:each="viewer:${viewers}">
+                        <th scope="row" th:text="${viewerStat.index+1}"></th>
+                        <td th:text="${viewer.getIp()}"></td>
+                        <td th:text="${viewer.getTime()}"></td>
                     </tr>
                     </tbody>
                 </table>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1">上一页</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">下一页</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </main>

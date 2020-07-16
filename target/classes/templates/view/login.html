@@ -24,12 +24,13 @@
                 <div class="card fat">
                     <div class="card-body">
                         <h4 class="card-title text-center">登录</h4>
-                        <form method="POST" class="my-login-validation" novalidate="">
+                        <p class="text-center" style="color: red;" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
+                        <form method="post" class="my-login-validation" th:action="@{/login}">
                             <div class="form-group">
                                 <label for="formGroupExampleInput">用户名</label>
                                 <input id="formGroupExampleInput" autocomplete="tel" type="text" class="form-control" name="username" required autofocus>
                                 <div class="invalid-feedback">
-                                    Username is invalid
+                                    用户名无效
                                 </div>
                             </div>
 
@@ -37,7 +38,7 @@
                                 <label for="password">密码</label>
                                 <input id="password" autocomplete="tel" type="password" class="form-control" name="password" required data-eye>
                                 <div class="invalid-feedback">
-                                    Password is required
+                                    密码不为空
                                 </div>
                             </div>
                             <div class="form-group m-0">
