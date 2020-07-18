@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ayjin.mapper.LinkMapper">
+    <!--留言查询-->
+    <select id="queryAllLinks" resultType="link">
+        select id,username,email,link,status from links
+    </select>
+    <!--增加留言-->
+    <update id="addLink" parameterType="link">
+        update links set status='1' where id=#{id}
+    </update>
+    <!--删除留言-->
+    <update id="delLink" parameterType="link">
+        update links set status='0' where id=#{id}
+    </update>
+</mapper>

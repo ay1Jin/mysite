@@ -12,22 +12,8 @@ import java.util.List;
 @Controller
 @RequestMapping("/admin/")
 public class adminController {
-
-
     @RequestMapping({"","index"})
     public String admin(){
         return "admin/index";
-    }
-    @RequestMapping("messages")
-    public String messages(){
-        return "admin/messages";
-    }
-    @RequestMapping("users")
-    public String users(){
-        return "admin/users";
-    }
-    @RequestMapping("links")
-    public String links(){
-        return "admin/links";
     }
 }

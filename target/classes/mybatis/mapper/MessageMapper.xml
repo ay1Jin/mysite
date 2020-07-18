@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ayjin.mapper.MessageMapper">
+    <!--所有留言查询-->
+    <select id="queryAllMessages" resultType="message">
+        select id,author,title,content,ip,time,likeCount,comCount,status from messages
+    </select>
+    <!--展示留言查询-->
+    <select id="queryShowMessages" resultType="message">
+        select id,author,title,content,ip,time,likeCount,comCount,status from messages where status='1' order by time desc
+    </select>
+    <!--展示留言id-->
+    <select id="queryMsgById" resultType="message">
+        select id,author,title,content,ip,time,likeCount,comCount,status
+        from messages where status='1' and id = #{id}
+    </select>
+    <!--添加留言-->
+    <insert id="addmsg" parameterType="message">
+        insert into messages (title,content,author,email,ip) values (#{title},#{content},#{author},#{email},#{ip})
+    </insert>
+    <!--删除留言-->
+    <update id="delmsg" parameterType="message">
+        update messages set status='0' where id=#{id}
+    </update>
+</mapper>

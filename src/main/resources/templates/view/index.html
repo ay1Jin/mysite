@@ -64,62 +64,20 @@
         <hr>
         <main style="margin-top: 50px">
             <ul class="list-unstyled">
-                <li>
-                    <a th:href="@{/message}"><h2>07.12 生</h2></a>
+                <li th:each="content:${pageInfo.list}">
+                    <a th:href="@{'/message/'+${content.id}}"><h2 th:text="${content.title}"></h2></a>
                     <div class="message-introduce">
-                        <span><i class="fa fa-user-o" aria-hidden="true"> ayjin </i></span>
-                        <span><i class="fa fa-location-arrow" aria-hidden="true"> 192.168.1.1</i></span>
+                        <span><i class="fa fa-user-o" aria-hidden="true" th:text="${content.author}">  </i></span>
+                        <span><i class="fa fa-location-arrow" aria-hidden="true" th:text="${content.ip}"> </i></span>
                     </div>
-                    <div style="margin-top: 20px"><p style="font-size: 1.1em">不使用智能手机的人是怎么生活的？昨天去理发，肖店里没有二维码，那些经常不带现金的年轻人就只能下次在给了，我问为啥不放二维码，他说他不会用，也是。他理发20多年了，从小到达，从没见他用过电话。是个...</p></div>
+                    <div style="margin-top: 20px"><p style="font-size: 1.1em" th:text="${content.content}"></p></div>
                     <div class="message-footer">
-                        <span><i class="fa fa-calendar" aria-hidden="true"> 2020-07-13 </i></span>
-                        <span class="zan"><i class="fa fa-thumbs-o-up" aria-hidden="true" > 2 </i></span>
-                        <span><i class="fa fa-commenting-o" aria-hidden="true"> 1 </i></span>
+                        <span><i class="fa fa-calendar" aria-hidden="true" th:text="${content.time}"> </i></span>
+                        <span class="zan"><i class="fa fa-thumbs-o-up" aria-hidden="true" th:text="${content.likeCount}"></i></span>
+                        <span><i class="fa fa-commenting-o" aria-hidden="true" th:text="${content.comCount}"></i></span>
                     </div>
+                    <hr>
                 </li>
-                <hr>
-                <li>
-                    <a th:href="@{/message}"><h2>07.12 生</h2></a>
-                    <div class="message-introduce">
-                        <span><i class="fa fa-user-o" aria-hidden="true"> ayjin </i></span>
-                        <span><i class="fa fa-location-arrow" aria-hidden="true"> 192.168.1.1</i></span>
-                    </div>
-                    <div style="margin-top: 20px"><p style="font-size: 1.1em">不使用智能手机的人是怎么生活的？昨天去理发，肖店里没有二维码，那些经常不带现金的年轻人就只能下次在给了，我问为啥不放二维码，他说他不会用，也是。他理发20多年了，从小到达，从没见他用过电话。是个...</p></div>
-                    <div class="message-footer">
-                        <span><i class="fa fa-calendar" aria-hidden="true"> 2020-07-13 </i></span>
-                        <span class="zan"><i class="fa fa-thumbs-o-up" aria-hidden="true" > 2 </i></span>
-                        <span><i class="fa fa-commenting-o" aria-hidden="true"> 1 </i></span>
-                    </div>
-                </li>
-                <hr>
-                <li>
-                    <a th:href="@{/message}"><h2>07.12 生</h2></a>
-                    <div class="message-introduce">
-                        <span><i class="fa fa-user-o" aria-hidden="true"> ayjin </i></span>
-                        <span><i class="fa fa-location-arrow" aria-hidden="true"> 192.168.1.1</i></span>
-                    </div>
-                    <div style="margin-top: 20px"><p style="font-size: 1.1em">不使用智能手机的人是怎么生活的？昨天去理发，肖店里没有二维码，那些经常不带现金的年轻人就只能下次在给了，我问为啥不放二维码，他说他不会用，也是。他理发20多年了，从小到达，从没见他用过电话。是个...</p></div>
-                    <div class="message-footer">
-                        <span><i class="fa fa-calendar" aria-hidden="true"> 2020-07-13 </i></span>
-                        <span class="zan"><i class="fa fa-thumbs-o-up" aria-hidden="true" > 2 </i></span>
-                        <span><i class="fa fa-commenting-o" aria-hidden="true"> 1 </i></span>
-                    </div>
-                </li>
-                <hr>
-                <li>
-                    <a th:href="@{/message}"><h2>07.12 生</h2></a>
-                    <div class="message-introduce">
-                        <span><i class="fa fa-user-o" aria-hidden="true"> ayjin </i></span>
-                        <span><i class="fa fa-location-arrow" aria-hidden="true"> 192.168.1.1</i></span>
-                    </div>
-                    <div style="margin-top: 20px"><p style="font-size: 1.1em">不使用智能手机的人是怎么生活的？昨天去理发，肖店里没有二维码，那些经常不带现金的年轻人就只能下次在给了，我问为啥不放二维码，他说他不会用，也是。他理发20多年了，从小到达，从没见他用过电话。是个...</p></div>
-                    <div class="message-footer">
-                        <span><i class="fa fa-calendar" aria-hidden="true"> 2020-07-13 </i></span>
-                        <span class="zan"><i class="fa fa-thumbs-o-up" aria-hidden="true" > 2 </i></span>
-                        <span><i class="fa fa-commenting-o" aria-hidden="true"> 1 </i></span>
-                    </div>
-                </li>
-                <hr>
             </ul>
 
             <!--            发表留言-->
@@ -127,9 +85,9 @@
                 留言
             </button>
             <!--分页-->
-            <a href="#" style="float: right;margin: auto 0px;color: #999;font-size: 14px">下一页 <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-
-<!--            弹框-->
+            <a th:href="@{/index(pageNum=${pageInfo.getNextPage()})}" th:if="${pageInfo.hasNextPage}" style="float: right;margin: auto 0px;color: #999;font-size: 14px">下一页 <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            <a th:href="@{/index(pageNum=${pageInfo.getPrePage()})}" th:if="${pageInfo.hasPreviousPage}" style="float: right;margin: auto 0px;color: #999;font-size: 14px"><i class="fa fa-angle-left" aria-hidden="true"></i> 上一页 </a>
+            <!--            弹框-->
             <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
@@ -144,14 +102,14 @@
                                 <div class="row">
                                     <div class="col-lg-10 offset-lg-1">
                                         <div class="contact-box text-center">
-                                            <form id="ajax-contact" action="contact.php" method="post">
+                                            <form id="ajax-contact" th:action="@{/submsg}" method="post">
                                                 <div class="form-group row">
-                                                    <div class="col-lg-6"><input type="text" class="form-control" id="name" name="name"
+                                                    <div class="col-lg-6"><input type="text" class="form-control" id="name" name="username"
                                                                                  placeholder="昵称" required=""></div>
                                                     <div class="col-lg-6"><input type="email" class="form-control" id="email" name="email"
                                                                                  placeholder="邮箱" required=""></div>
                                                 </div>
-                                                <div class="form-group"><input type="text" class="form-control" id="subject" name="subject"
+                                                <div class="form-group"><input type="text" class="form-control" id="subject" name="title"
                                                                                placeholder="标题"></div>
                                                 <div class="form-group"><textarea class="form-control" id="message" name="message" rows="10"
                                                                                   placeholder="留言内容*" required=""></textarea></div>

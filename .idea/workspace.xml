@@ -20,101 +20,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="86792b34-7b12-446f-84b0-61f2564596d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_23.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_5_1_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_spring_boot_autoconfigure_1_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_pagehelper_pagehelper_spring_boot_starter_1_2_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_20_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_3_4_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_core_2_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_schema_2_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spi_2_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_web_2_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger2_2_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_common_2_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_2_9_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_models_1_5_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_cache_1_5_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_config_core_1_5_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_config_ogdl_1_5_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_core_1_5_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_cipher_1_5_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_core_1_5_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_crypto_hash_1_5_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_event_1_5_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_lang_1_5_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_spring_1_5_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_spring_boot_starter_1_5_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_spring_boot_web_starter_1_5_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_shiro_shiro_web_1_5_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_2_0_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_2_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_2_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_owasp_encoder_encoder_1_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_3_1_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_log4j_1_3_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_1_2_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_1_2_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_2_7_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_2_7_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/config/DruidConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/config/ShiroConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/config/SwaggerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/config/UserRealm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/controller/admin/ViewerController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/mapper/ViewerMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/pojo/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/pojo/Viewer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/service/UserService/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/service/UserService/UserServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/service/ViewerService/ViewerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/service/ViewerService/ViewerServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/utils/getIp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/UserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ViewerMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/viewerlist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/controller/admin/AdLinkController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/controller/admin/AdMessageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/controller/admin/AdUserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/mapper/CommentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/mapper/LinkMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/mapper/MessageMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/pojo/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/pojo/Link.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/pojo/Message.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/service/MessageService/MessageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/service/MessageService/MessageServiceImp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/CommentMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/LinkMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/MessageMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/linklist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/messagelist.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/userlist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mysite.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ayjin/MysiteApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/MysiteApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ayjin/controller/admin/ViewerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/controller/admin/AdViewerController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ayjin/controller/admin/adminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/controller/admin/adminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ayjin/controller/view/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/controller/view/loginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/ayjin/controller/view/showController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/controller/view/showController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/viewers.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/viewers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/ayjin/MysiteApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/ayjin/MysiteApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ayjin/controller/view/indexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/controller/view/indexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/ayjin/controller/view/messageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ayjin/controller/view/messageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/users.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/view/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/view/message.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ayjin/controller/admin/ViewerController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/ayjin/controller/admin/adminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ayjin/controller/admin/adminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ayjin/controller/view/loginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ayjin/controller/view/loginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/ayjin/controller/view/showController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ayjin/controller/view/showController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/viewers.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/viewers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/view/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/view/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ayjin/controller/view/indexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ayjin/controller/view/indexController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/ayjin/controller/view/messageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/ayjin/controller/view/messageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/users.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/users.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/mysite-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/mysite-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/mysite-0.0.1-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/mysite-0.0.1-SNAPSHOT.jar.original" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ayjin.MysiteApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.ayjin.MysiteApplicationTests.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.ayjin.MysiteApplicationTests.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.ayjin.MysiteApplicationTests.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/ayjin/MysiteApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/ayjin/MysiteApplicationTests.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,9 +68,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
+        <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -172,9 +115,9 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../springboot-08-swagger" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../springboot-05-mybatis" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -226,7 +169,8 @@
       <workItem from="1594803141131" duration="14444000" />
       <workItem from="1594877176882" duration="24000" />
       <workItem from="1594877242616" duration="8000" />
-      <workItem from="1594877275422" duration="25037000" />
+      <workItem from="1594877275422" duration="25357000" />
+      <workItem from="1595048899601" duration="15212000" />
     </task>
     <servers />
   </component>
@@ -250,62 +194,70 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1594881420106" />
-    <state x="497" y="213" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594891148157">
+    <state x="497" y="213" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1595057560025">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="497" y="213" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1594891148157" />
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1594891066661">
+    <state x="497" y="213" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1595057560025" />
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1595050058244">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1594891066661" />
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1595050058244" />
+    <state x="553" y="297" width="448" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1595061841355">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="553" y="297" width="448" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1595061841355" />
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1594881878740">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1594881878740" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1594915940524">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1595062057953">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1594915940524" />
-    <state width="1492" height="226" key="GridCell.Tab.0.bottom" timestamp="1594925890470">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1595062057953" />
+    <state width="1342" height="304" key="GridCell.Tab.0.bottom" timestamp="1595064139640">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="226" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594925890470" />
-    <state width="1492" height="226" key="GridCell.Tab.0.center" timestamp="1594925890470">
+    <state width="1342" height="304" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595064139640" />
+    <state width="1342" height="304" key="GridCell.Tab.0.center" timestamp="1595064139640">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="226" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1594925890470" />
-    <state width="1492" height="226" key="GridCell.Tab.0.left" timestamp="1594925890470">
+    <state width="1342" height="304" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1595064139640" />
+    <state width="1342" height="304" key="GridCell.Tab.0.left" timestamp="1595064139640">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="226" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1594925890470" />
-    <state width="1492" height="226" key="GridCell.Tab.0.right" timestamp="1594925890470">
+    <state width="1342" height="304" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1595064139640" />
+    <state width="1342" height="304" key="GridCell.Tab.0.right" timestamp="1595064139640">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="226" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1594925890470" />
-    <state width="1492" height="226" key="GridCell.Tab.1.bottom" timestamp="1594925890471">
+    <state width="1342" height="304" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1595064139640" />
+    <state width="1342" height="304" key="GridCell.Tab.1.bottom" timestamp="1595064139641">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="226" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594925890471" />
-    <state width="1492" height="226" key="GridCell.Tab.1.center" timestamp="1594925890470">
+    <state width="1342" height="304" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1595064139641" />
+    <state width="1342" height="304" key="GridCell.Tab.1.center" timestamp="1595064139641">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="226" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1594925890470" />
-    <state width="1492" height="226" key="GridCell.Tab.1.left" timestamp="1594925890470">
+    <state width="1342" height="304" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1595064139641" />
+    <state width="1342" height="304" key="GridCell.Tab.1.left" timestamp="1595064139641">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="226" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1594925890470" />
-    <state width="1492" height="226" key="GridCell.Tab.1.right" timestamp="1594925890470">
+    <state width="1342" height="304" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1595064139641" />
+    <state width="1342" height="304" key="GridCell.Tab.1.right" timestamp="1595064139641">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1492" height="226" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1594925890470" />
+    <state width="1342" height="304" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1595064139641" />
+    <state x="270" y="57" key="SettingsEditor" timestamp="1595056803910">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="270" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1595056803910" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1594804830047">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1594804830047" />
-    <state x="430" y="146" width="672" height="678" key="search.everywhere.popup" timestamp="1594916834410">
+    <state x="430" y="146" width="672" height="678" key="search.everywhere.popup" timestamp="1595052867677">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="430" y="146" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1594916834410" />
+    <state x="430" y="146" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1595052867677" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -24,53 +24,17 @@
     <div class="message-body">
         <header th:replace="/view/about::header2"></header>
         <hr>
-        <a href="#"><h2>07.12 生</h2></a>
+        <a href="#"><h2 th:text="${message.getTitle()}"></h2></a>
         <div class="message-introduce">
-            <span><i class="fa fa-user-o" aria-hidden="true"> ayjin </i></span>
-            <span><i class="fa fa-location-arrow" aria-hidden="true"> 192.168.1.1</i></span>
+            <span><i class="fa fa-user-o" aria-hidden="true" th:text="${message.getAuthor()}"></i></span>
+            <span><i class="fa fa-location-arrow" aria-hidden="true" th:text="${message.getIp()}"></i></span>
         </div>
-        <div style="margin-top: 20px"><p style="font-size: 1.1em">
-            久违的看了一集剧场版的动漫，
-            画风很清新，
-            剧情铺垫有些长，
-            而且最后结局比较潦草。
-
-            记录下评价：
-
-            无限
-            敢爱敢恨，性格直爽，也很任性，
-            但这种性格的她也会有所顾忌。
-            所以之后为了解日之出失去的人类的“脸”，
-            从而引发了一系列的故事......
-
-            日之出
-            优秀老实且不坦率，
-            后来得知无限变成猫的事情有所改变。
-            也正视了无限的感情。
-
-            我感觉本篇真正的MVP是“黄豆粉”，
-            得到无限失去的人类的“脸”，
-            从而变成“人类”的猫。
-            黄豆粉不惜自己猫生短暂的寿命，
-            去找“卖面具的”猫，
-            以换取人类的身份。
-            只为自己主人熏的安心。
-            虽然熏与猫“无限”的感情好了，
-            但失去的黄豆粉的熏也是心不在焉，
-            说出了“希望黄豆粉离开我能找个好主人”的话，
-            触动到了黄豆粉，
-            导致黄豆粉去找了日之出，
-            说出了事情的真相。
-
-            随后带日之出去猫岛救回了无限。
-            一切归于平静。
-
-            易求无价宝，难得有情猫。
+        <div style="margin-top: 20px"><p style="font-size: 1.1em" th:text="${message.getContent()}">
         </p></div>
         <div class="message-footer">
-            <span><i class="fa fa-calendar" aria-hidden="true"> 2020-07-13 </i></span>
-            <span id="zan"><i class="fa fa-thumbs-o-up" aria-hidden="true" > 2 </i></span>
-            <span><i class="fa fa-commenting-o" aria-hidden="true"> 1 </i></span>
+            <span><i class="fa fa-calendar" aria-hidden="true" th:text="${message.getTime()}"></i></span>
+            <span id="zan"><i class="fa fa-thumbs-o-up" aria-hidden="true" th:text="${message.getLikeCount()}" ></i></span>
+            <span><i class="fa fa-commenting-o" aria-hidden="true" th:text="${message.getComCount()}"></i></span>
         </div>
         <hr>
         <div class="message-comment">
