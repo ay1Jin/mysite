@@ -22,7 +22,7 @@ public class AdViewerController {
 
     @RequestMapping({"","/"})
     public String index(Model model){
-        System.out.println("开始查询");
+//        System.out.println("开始查询");
         List<Viewer> viewers = viewerMapper.queryAllViewers();
         model.addAttribute("viewers",viewers);
         return "redirect:/admin/viewers/list";

@@ -15,9 +15,9 @@ public class showController {
     @RequestMapping("")
     public String show(HttpServletRequest request){
         String ipAddr = getIp.getIpAddr(request);
-        System.out.println(ipAddr);
+//        System.out.println(ipAddr);
         viewerMapper.addViewers(ipAddr);
-        System.out.println("成功添加！");
+//        System.out.println("成功添加！");
         return "view/view";
     }
 }

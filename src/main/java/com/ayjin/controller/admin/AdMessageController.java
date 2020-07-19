@@ -24,7 +24,7 @@ public class AdMessageController {
 
     @RequestMapping({"","/"})
     public String index(Model model){
-        System.out.println("开始查询");
+//        System.out.println("开始查询");
         return "redirect:/admin/messages/list";
     }
     @RequestMapping("/list")
@@ -37,7 +37,7 @@ public class AdMessageController {
         List<Message> messages = messageMapper.queryAllMessages();
         PageInfo<Message> pageInfo = new PageInfo<Message>(messages);
         model.addAttribute("pageInfo",pageInfo);
-        System.out.println(pageInfo);
+//        System.out.println(pageInfo);
         return "admin/messagelist";
     }
     @GetMapping("/delmsg/{id}")

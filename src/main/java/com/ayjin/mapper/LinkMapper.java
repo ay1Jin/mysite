@@ -10,6 +10,8 @@ import java.util.List;
 @Repository
 public interface LinkMapper {
     List<Link> queryAllLinks();
-    int addLink(int id);
+    List<Link> queryAllShowLinks();
+    int addLink(Link link);
+    int sucLink(int id);
     int delLink(int id);
 }

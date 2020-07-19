@@ -24,7 +24,7 @@ public class AdUserController {
 
     @RequestMapping({"","/"})
     public String index(Model model){
-        System.out.println("开始查询");
+//        System.out.println("开始查询");
         return "redirect:/admin/users/list";
     }
     @RequestMapping("/list")
@@ -36,7 +36,7 @@ public class AdUserController {
         List<Comment> comments = commentMapper.queryAllComment();
         PageInfo<Comment> pageInfo = new PageInfo<Comment>(comments);
         model.addAttribute("pageInfo",pageInfo);
-        System.out.println(pageInfo);
+//        System.out.println(pageInfo);
         return "admin/userlist";
     }
     @GetMapping("/delmsg/{id}")

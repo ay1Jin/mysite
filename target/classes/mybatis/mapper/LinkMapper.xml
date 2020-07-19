@@ -7,8 +7,16 @@
     <select id="queryAllLinks" resultType="link">
         select id,username,email,link,status from links
     </select>
-    <!--增加留言-->
-    <update id="addLink" parameterType="link">
+    <!--可显示留言查询-->
+    <select id="queryAllShowLinks" resultType="link">
+        select id,username,email,link,status from links where status=1
+    </select>
+    <!--申请友链-->
+    <insert id="addLink" parameterType="link">
+        insert into links (username,email,link) values (#{username},#{email},#{link})
+    </insert>
+    <!--同意留言-->
+    <update id="sucLink" parameterType="link">
         update links set status='1' where id=#{id}
     </update>
     <!--删除留言-->

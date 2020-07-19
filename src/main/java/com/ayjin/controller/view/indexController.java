@@ -27,7 +27,7 @@ public class indexController {
         List<Message> messages = messageMapper.queryShowMessages();
         PageInfo<Message> pageInfo = new PageInfo<Message>(messages);
         model.addAttribute("pageInfo",pageInfo);
-        System.out.println(pageInfo);
+//        System.out.println(pageInfo);
         return "view/index";
     }
 
@@ -48,7 +48,7 @@ public class indexController {
         savemsg.setContent(message);
         savemsg.setIp(ipAddr);
         messageMapper.addmsg(savemsg);
-        System.out.println("提交成功！");
+//        System.out.println("提交成功！");
         return "redirect:/index";
     }
 }

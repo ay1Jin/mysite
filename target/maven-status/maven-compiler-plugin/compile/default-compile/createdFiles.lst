@@ -2,15 +2,18 @@ com\ayjin\controller\view\indexController.class
 com\ayjin\config\SwaggerConfig.class
 com\ayjin\controller\admin\AdMessageController.class
 com\ayjin\mapper\CommentMapper.class
+com\ayjin\controller\admin\AdQuesController.class
 com\ayjin\mapper\ViewerMapper.class
 com\ayjin\service\ViewerService\ViewerServiceImp.class
 com\ayjin\pojo\Message.class
 com\ayjin\controller\view\aboutController.class
+com\ayjin\pojo\Question.class
 com\ayjin\MysiteApplication.class
 com\ayjin\service\ViewerService\ViewerService.class
 com\ayjin\config\ShiroConfig.class
 com\ayjin\pojo\Comment.class
 com\ayjin\controller\admin\AdLinkController.class
+com\ayjin\mapper\QuestionMapper.class
 com\ayjin\config\DruidConfig.class
 com\ayjin\mapper\LinkMapper.class
 com\ayjin\controller\view\linksController.class
@@ -24,6 +27,7 @@ com\ayjin\mapper\MessageMapper.class
 com\ayjin\config\UserRealm.class
 com\ayjin\pojo\Link.class
 com\ayjin\utils\getIp.class
+com\ayjin\controller\view\questionController.class
 com\ayjin\controller\view\messageController.class
 com\ayjin\service\MessageService\MessageServiceImp.class
 com\ayjin\controller\view\contactController.class

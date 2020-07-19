@@ -5,7 +5,7 @@
 <mapper namespace="com.ayjin.mapper.MessageMapper">
     <!--所有留言查询-->
     <select id="queryAllMessages" resultType="message">
-        select id,author,title,content,ip,time,likeCount,comCount,status from messages
+        select id,author,title,content,ip,time,likeCount,comCount,status from messages order by time desc
     </select>
     <!--展示留言查询-->
     <select id="queryShowMessages" resultType="message">

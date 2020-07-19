@@ -10,5 +10,7 @@ import java.util.List;
 @Repository
 public interface CommentMapper {
     List<Comment> queryAllComment();
+    List<Comment> queryCommentById(int id);
     int delCom(int id);
+    int addCom(Comment comment);
 }

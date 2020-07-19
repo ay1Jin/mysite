@@ -18,6 +18,15 @@
             $('[data-toggle="collapse"]').popover()
         })
     </script>
+    <style>
+        /*文章的显示控制*/
+        .msgcontent{
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient:vertical;
+            -webkit-line-clamp:4;//从第3行开始隐藏
+        }
+    </style>
 </head>
 <body>
 <div class="container">
@@ -41,6 +50,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" th:href="@{/about}">关于</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/question}">反馈</a>
                         </li>
                     </ul>
                 </div>
@@ -70,7 +82,7 @@
                         <span><i class="fa fa-user-o" aria-hidden="true" th:text="${content.author}">  </i></span>
                         <span><i class="fa fa-location-arrow" aria-hidden="true" th:text="${content.ip}"> </i></span>
                     </div>
-                    <div style="margin-top: 20px"><p style="font-size: 1.1em" th:text="${content.content}"></p></div>
+                    <div style="margin-top: 20px" ><p class="msgcontent" style="font-size: 1.1em" th:text="${content.content}"></p></div>
                     <div class="message-footer">
                         <span><i class="fa fa-calendar" aria-hidden="true" th:text="${content.time}"> </i></span>
                         <span class="zan"><i class="fa fa-thumbs-o-up" aria-hidden="true" th:text="${content.likeCount}"></i></span>

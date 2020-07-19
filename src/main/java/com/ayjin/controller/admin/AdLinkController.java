@@ -24,7 +24,7 @@ public class AdLinkController {
 
     @RequestMapping({"","/"})
     public String index(Model model){
-        System.out.println("开始查询");
+//        System.out.println("开始查询");
         return "redirect:/admin/links/list";
     }
     @RequestMapping("/list")
@@ -37,7 +37,7 @@ public class AdLinkController {
         List<Link> links = linkMapper.queryAllLinks();
         PageInfo<Link> pageInfo = new PageInfo<Link>(links);
         model.addAttribute("pageInfo",pageInfo);
-        System.out.println(pageInfo);
+//        System.out.println(pageInfo);
         return "admin/linklist";
     }
 
@@ -45,7 +45,7 @@ public class AdLinkController {
     public String addLink(
             @PathVariable("id")Integer id
     ){
-        linkMapper.addLink(id);
+        linkMapper.sucLink(id);
         return "redirect:/admin/links/list";
     }
 

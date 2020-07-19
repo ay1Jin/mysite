@@ -22,23 +22,23 @@
 <body>
 <div class="container">
     <div class="message-body">
-        <header th:replace="/view/about::header2"></header>
+        <header th:replace="view/about::header2"></header>
         <hr>
-        <a href="#"><h2 th:text="${message.getTitle()}"></h2></a>
+        <a href="#"><h2 th:text="${messages.getTitle()}"></h2></a>
         <div class="message-introduce">
-            <span><i class="fa fa-user-o" aria-hidden="true" th:text="${message.getAuthor()}"></i></span>
-            <span><i class="fa fa-location-arrow" aria-hidden="true" th:text="${message.getIp()}"></i></span>
+            <span><i class="fa fa-user-o" aria-hidden="true" th:text="${messages.getAuthor()}"></i></span>
+            <span><i class="fa fa-location-arrow" aria-hidden="true" th:text="${messages.getIp()}"></i></span>
         </div>
-        <div style="margin-top: 20px"><p style="font-size: 1.1em" th:text="${message.getContent()}">
+        <div style="margin-top: 20px"><p style="font-size: 1.1em" th:text="${messages.getContent()}">
         </p></div>
         <div class="message-footer">
-            <span><i class="fa fa-calendar" aria-hidden="true" th:text="${message.getTime()}"></i></span>
-            <span id="zan"><i class="fa fa-thumbs-o-up" aria-hidden="true" th:text="${message.getLikeCount()}" ></i></span>
-            <span><i class="fa fa-commenting-o" aria-hidden="true" th:text="${message.getComCount()}"></i></span>
+            <span><i class="fa fa-calendar" aria-hidden="true" th:text="${messages.getTime()}"></i></span>
+            <span id="zan"><i class="fa fa-thumbs-o-up" aria-hidden="true" th:text="${messages.getLikeCount()}" ></i></span>
+            <span><i class="fa fa-commenting-o" aria-hidden="true" th:text="${messages.getComCount()}"></i></span>
         </div>
         <hr>
         <div class="message-comment">
-            <form>
+            <form th:action="@{'/subCom/'+${messages.getId()}}" method="post">
                 <div class="form-group">
                     <textarea class="form-control" name="comment" rows="3" placeholder="评论"></textarea>
                 </div>
@@ -55,7 +55,7 @@
                     </div>
                     <div class="col-sm-2">
                         <div class="form-group float-right text-center">
-                            <input type="button" value="提交评论" >
+                            <input type="submit" value="提交评论" >
                         </div>
                     </div>
                 </div>
@@ -64,94 +64,22 @@
         <hr>
         <div class="show-comment">
             <ul class="list-group list-group-flush" id="comment-list">
-                <li class="list-group-item">
+                <li class="list-group-item" th:each="comment:${comments}">
                     <div class="author">
                         <div class="avatar float-left">
                             <img src="../img/fac.png" alt="fac" class="img-fluid shadow" style="width: 50px;height: 50px;">
                         </div>
                         <div class="author-name float-left">
-                            <small><a href="index.html">一梦江湖 </a></small>
+                            <small><a href="index.html" th:text="${comment.getAuthor()}"> </a></small>
                             <small><a href="" style="background:#dddddd;">回复</a></small>
                         </div>
                         <div class="time float-left" >
-                            <small style="margin-left: 8px;">2020-07-14</small>
+                            <small style="margin-left: 8px;" th:text="${comment.getTime()}"></small>
                         </div>
                     </div>
                     <br>
                     <div class="comment-content">
-                        <p><small><strong>你好！欢迎来访~</strong></small></p>
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <div class="author">
-                        <div class="avatar float-left">
-                            <img src="../img/fac.png" alt="fac" class="img-fluid shadow" style="width: 50px;height: 50px;">
-                        </div>
-                        <div class="author-name float-left">
-                            <small><a href="index.html">一梦江湖 </a></small>
-                            <small><a href="" style="background:#dddddd;">回复</a></small>
-                        </div>
-                        <div class="time float-left" >
-                            <small style="margin-left: 8px;">2020-07-14</small>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="comment-content">
-                        <p><small><strong>你好！欢迎来访~</strong></small></p>
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <div class="author">
-                        <div class="avatar float-left">
-                            <img src="../img/fac.png" alt="fac" class="img-fluid shadow" style="width: 50px;height: 50px;">
-                        </div>
-                        <div class="author-name float-left">
-                            <small><a href="index.html">一梦江湖 </a></small>
-                            <small><a href="" style="background:#dddddd;">回复</a></small>
-                        </div>
-                        <div class="time float-left" >
-                            <small style="margin-left: 8px;">2020-07-14</small>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="comment-content">
-                        <p><small><strong>你好！欢迎来访~</strong></small></p>
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <div class="author">
-                        <div class="avatar float-left">
-                            <img src="../img/fac.png" alt="fac" class="img-fluid shadow" style="width: 50px;height: 50px;">
-                        </div>
-                        <div class="author-name float-left">
-                            <small><a href="index.html">一梦江湖 </a></small>
-                            <small><a href="" style="background:#dddddd;">回复</a></small>
-                        </div>
-                        <div class="time float-left" >
-                            <small style="margin-left: 8px;">2020-07-14</small>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="comment-content">
-                        <p><small><strong>你好！欢迎来访~</strong></small></p>
-                    </div>
-                </li>
-                <li class="list-group-item">
-                    <div class="author">
-                        <div class="avatar float-left">
-                            <img src="../img/fac.png" alt="fac" class="img-fluid shadow" style="width: 50px;height: 50px;">
-                        </div>
-                        <div class="author-name float-left">
-                            <small><a href="index.html">一梦江湖 </a></small>
-                            <small><a href="" style="background:#dddddd;">回复</a></small>
-                        </div>
-                        <div class="time float-left" >
-                            <small style="margin-left: 8px;">2020-07-14</small>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="comment-content">
-                        <p><small><strong>你好！欢迎来访~</strong></small></p>
+                        <p><small><strong th:text="${comment.getContent()}">~</strong></small></p>
                     </div>
                 </li>
             </ul>

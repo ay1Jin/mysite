@@ -3,11 +3,19 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ayjin.mapper.CommentMapper">
-    <!--留言查询-->
+    <!--查询所有评论-->
     <select id="queryAllComment" resultType="comment">
-        select id,msgId,content,author,time,email,status from comments
+        select id,msgId,content,author,time,email,status from comments order by time desc
     </select>
-    <!--删除留言-->
+    <!--查询文章的评论-->
+    <select id="queryCommentById" resultType="comment">
+        select id,msgId,content,author,time,email,status from comments where status='1' and msgId=#{id} order by time desc
+    </select>
+    <!--增加文章的评论-->
+    <insert id="addCom" parameterType="comment">
+        insert into comments (msgId,content,author,email) values (#{msgId},#{content},#{author},#{email})
+    </insert>
+    <!--删除评论-->
     <update id="delCom" parameterType="comment">
         update comments set status='0' where id=#{id}
     </update>

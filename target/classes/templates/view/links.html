@@ -22,12 +22,11 @@
 <body>
 <div class="container">
     <div class="message-body">
-        <header th:replace="/view/index::header1"></header>
+        <header th:replace="view/index::header1"></header>
         <hr>
         <main style="margin-top: 50px">
             <ul class="list-group list-group-flush text-center border">
-                <li class="list-group-item"><a href="">ayjin</a></li>
-                <li class="list-group-item"><a href="">一命宿星</a></li>
+                <li class="list-group-item" th:each="link:${linkList}"><a th:href="${link.getLink()}" th:text="${link.getUsername()}"></a></li>
             </ul>
             <hr>
             <button style="background-color:transparent; border: 1px solid #999;font-size: 14px" type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter">
@@ -51,14 +50,14 @@
                                 <div class="row">
                                     <div class="col-lg-10 offset-lg-1">
                                         <div class="contact-box text-center">
-                                            <form id="ajax-contact" action="contact.php" method="post">
+                                            <form id="ajax-contact" th:action="@{/subLink}" method="post">
                                                 <div class="form-group row">
                                                     <div class="col-lg-6"><input type="text" class="form-control" id="name" name="name"
                                                                                  placeholder="昵称" required=""></div>
                                                     <div class="col-lg-6"><input type="email" class="form-control" id="email" name="email"
                                                                                  placeholder="邮箱" required=""></div>
                                                 </div>
-                                                <div class="form-group"><input type="text" class="form-control" id="subject" name="subject"
+                                                <div class="form-group"><input type="text" class="form-control" id="subject" name="link"
                                                                                placeholder="链接"></div>
                                                 <button type="submit" class="btn btn-primary">提交申请</button>
                                                 <div id="form-messages"></div>

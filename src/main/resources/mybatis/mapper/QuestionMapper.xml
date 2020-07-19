@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ayjin.mapper.QuestionMapper">
+    <!--查询所有反馈问题-->
+    <select id="queryQuestions" resultType="question">
+        select * from question order by time desc
+    </select>
+    <!--添加问题反馈-->
+    <insert id="addQue" parameterType="question" >
+        insert into question (name,email,content) values (#{name},#{email},#{content})
+    </insert>
+</mapper>
