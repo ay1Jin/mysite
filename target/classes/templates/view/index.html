@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="zh-cn" xmlns:th="http://www.thymeleaf.org">
+<html lang="zh-cn" xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -56,7 +57,17 @@
                         </li>
                     </ul>
                 </div>
-                <button class="btn btn-secondary"><a th:href="@{/login}" style="color: black">登录</a></button>
+                <shiro:authenticated>
+                    <span shiro:principal property="name" style="margin-right: 5px"/>
+                    <button class="btn btn-secondary" style="border: none;background:transparent;"><a th:href="@{/logout}" style="color: black;border-bottom: 2px solid #555">退出</a></button>
+                </shiro:authenticated>
+                <shiro:guest>
+                    <button class="btn btn-secondary" style="margin-right: 5px;background-color:transparent;"><a th:href="@{/login}" style="color: black">登录</a></button>
+                    <button style="background-color:transparent; border: 1px solid #999;font-size: 16px" type="button" class="btn" data-toggle="modal" data-target="#regiModalCenter">
+                        注册
+                    </button>
+                </shiro:guest>
+
             </nav>
             <hr>
             <div class="row justify-content-around">
@@ -73,8 +84,16 @@
                 </div>
             </div>
         </header>
-        <hr>
-        <main style="margin-top: 50px">
+        <main>
+            <hr>
+            <!--发表留言-->
+            <button style="background-color:transparent; border: 1px solid #999;font-size: 14px" type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter">
+                留言
+            </button>
+            <!--分页-->
+            <a th:href="@{/index(pageNum=${pageInfo.getNextPage()})}" th:if="${pageInfo.hasNextPage}" style="float: right;margin: auto 0px;color: #999;font-size: 14px">下一页 <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+            <a th:href="@{/index(pageNum=${pageInfo.getPrePage()})}" th:if="${pageInfo.hasPreviousPage}" style="float: right;margin: auto 0px;color: #999;font-size: 14px"><i class="fa fa-angle-left" aria-hidden="true"></i> 上一页 </a>
+            <hr>
             <ul class="list-unstyled">
                 <li th:each="content:${pageInfo.list}">
                     <a th:href="@{'/message/'+${content.id}}"><h2 th:text="${content.title}"></h2></a>
@@ -85,21 +104,50 @@
                     <div style="margin-top: 20px" ><p class="msgcontent" style="font-size: 1.1em" th:text="${content.content}"></p></div>
                     <div class="message-footer">
                         <span><i class="fa fa-calendar" aria-hidden="true" th:text="${content.time}"> </i></span>
-                        <span class="zan"><i class="fa fa-thumbs-o-up" aria-hidden="true" th:text="${content.likeCount}"></i></span>
                         <span><i class="fa fa-commenting-o" aria-hidden="true" th:text="${content.comCount}"></i></span>
                     </div>
                     <hr>
                 </li>
             </ul>
 
-            <!--            发表留言-->
-            <button style="background-color:transparent; border: 1px solid #999;font-size: 14px" type="button" class="btn" data-toggle="modal" data-target="#exampleModalCenter">
-                留言
-            </button>
-            <!--分页-->
-            <a th:href="@{/index(pageNum=${pageInfo.getNextPage()})}" th:if="${pageInfo.hasNextPage}" style="float: right;margin: auto 0px;color: #999;font-size: 14px">下一页 <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-            <a th:href="@{/index(pageNum=${pageInfo.getPrePage()})}" th:if="${pageInfo.hasPreviousPage}" style="float: right;margin: auto 0px;color: #999;font-size: 14px"><i class="fa fa-angle-left" aria-hidden="true"></i> 上一页 </a>
-            <!--            弹框-->
+
+
+            <!--注册弹框-->
+            <div class="modal fade" id="regiModalCenter" tabindex="-1" role="dialog" aria-labelledby="regiModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="regiModalCenterTitle">注册</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <section>
+                                <div class="row">
+                                    <div class="col-lg-10 offset-lg-1">
+                                        <div class="contact-box text-center">
+                                            <form th:action="@{/subregi}" method="post">
+                                                <div class="form-group"><input type="text" class="form-control"  name="name"
+                                                                               placeholder="笔名"></div>
+                                                <div class="form-group"><input type="text" class="form-control"  name="username"
+                                                                               placeholder="账号"></div>
+                                                <div class="form-group"><input type="password" class="form-control"  name="password"
+                                                                               placeholder="密码"></div>
+                                                <div class="form-group"><input type="email" class="form-control"  name="email"
+                                                                               placeholder="邮箱"></div>
+                                                <button type="submit" class="btn btn-primary">提交</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--留言弹框-->
             <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
@@ -117,9 +165,9 @@
                                             <form id="ajax-contact" th:action="@{/submsg}" method="post">
                                                 <div class="form-group row">
                                                     <div class="col-lg-6"><input type="text" class="form-control" id="name" name="username"
-                                                                                 placeholder="昵称" required=""></div>
+                                                                                 placeholder="昵称"  th:value="${name}" required=""></div>
                                                     <div class="col-lg-6"><input type="email" class="form-control" id="email" name="email"
-                                                                                 placeholder="邮箱" required=""></div>
+                                                                                 placeholder="邮箱"  th:value="${email}" required=""></div>
                                                 </div>
                                                 <div class="form-group"><input type="text" class="form-control" id="subject" name="title"
                                                                                placeholder="标题"></div>
@@ -137,10 +185,8 @@
                 </div>
             </div>
 
-            <!--留言-->
 
         </main>
-        <hr>
     </div>
     <footer>
         <div class="text-center" style="font-size: 12.8px;color: #BBBBBB">
@@ -161,18 +207,5 @@
         </div>
     </footer>
 </div>
-<script>
-// <!--    点赞-->
-    $(".zan").click(function () {
-        addFavour(this);
-
-    });
-    // 评论
-    function addFavour(self){
-        console.log(self.getElementsByTagName("i")[0]);
-        console.log(self.getElementsByTagName("i")[0].innerText);
-        self.getElementsByTagName("i")[0].innerText++;
-    }
-</script>
 </body>
 </html>

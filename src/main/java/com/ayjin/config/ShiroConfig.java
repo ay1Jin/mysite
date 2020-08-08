@@ -1,5 +1,6 @@
 package com.ayjin.config;
 
+import at.pollux.thymeleaf.shiro.dialect.ShiroDialect;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -41,13 +42,20 @@ public class ShiroConfig {
         //拦截
         Map<String, String> filterMap = new LinkedHashMap<>();
         //权限,如果没有权限则跳转。记住一定要先把要授权的写在前面。
-        filterMap.put("/admin/**","authc");
+        filterMap.put("/admin/**","perms[admin]");
         bean.setFilterChainDefinitionMap(filterMap);
         //设置登录的请求
         bean.setLoginUrl("/login");
-        //未授权跳转回登录页面。
-        bean.setUnauthorizedUrl("/login");
+
+        //未授权跳转回主页面。
+        bean.setUnauthorizedUrl("/index");
 
         return bean;
+    }
+
+    //整合shiro+thymeleaf
+    @Bean
+    public ShiroDialect getShiroDialect(){
+        return new ShiroDialect();
     }
 }

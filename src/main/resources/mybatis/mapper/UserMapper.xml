@@ -7,4 +7,8 @@
     <select id="queryUserByName" resultType="User">
         select * from users where username = #{name} and status = '1'
     </select>
+    <!--增加用户-->
+    <insert id="addUser" parameterType="User">
+        insert into users (username,password,email,name) values (#{username},#{password},#{email},#{name})
+    </insert>
 </mapper>

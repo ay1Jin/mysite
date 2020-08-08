@@ -5,6 +5,8 @@ import com.ayjin.pojo.User;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.IncorrectCredentialsException;
+import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +16,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.thymeleaf.util.StringUtils;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 
 @Controller
@@ -40,14 +45,14 @@ public class loginController {
         Subject subject = SecurityUtils.getSubject();
         //封装用户的登陆数据
         UsernamePasswordToken token = new UsernamePasswordToken(name, password);
-        //查询账号密码
-        User user = userMapper.queryUserByName(name);
-        if (!StringUtils.isEmpty(name) && user.getPassword().equals(password)){
+        try {
             subject.login(token);
-            //返回后台页面
-            return "admin/viewers";
-        }else {
-            model.addAttribute("msg","账户或密码错误！");
+            return "redirect:/index";
+        }catch (UnknownAccountException e){
+            model.addAttribute("msg","用户名不存在！");
+            return "view/login";
+        }catch (IncorrectCredentialsException e){
+            model.addAttribute("msg","密码错误！");
             return "view/login";
         }
     }
